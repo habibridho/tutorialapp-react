@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     // ajax call
-    fetch('http://localhost:8000/api/all')
+    fetch('https://habibridho.gq:4000/api/all')
     .then(response => response.json())
     .then((json) => {
       this.setState({
@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   filter = () => {
-    fetch('http://localhost:8000/api/get?filter=' + this.state.filter)
+    fetch('https://habibridho.gq:4000/api/get?filter=' + this.state.filter)
     .then(response => response.json())
     .then((json) => {
       this.setState({
